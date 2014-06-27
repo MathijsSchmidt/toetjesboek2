@@ -13,3 +13,6 @@ include('../classes/class.database.php');
 
 //database 
 $database = new Database(DB_HOST,DB_NAME,DB_USER,DB_PASS);
+
+//session start
+session_start();
