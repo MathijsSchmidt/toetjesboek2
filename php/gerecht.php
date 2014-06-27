@@ -8,8 +8,10 @@ if(empty($_GET['gerecht'])) {
 	die("Er is geen gerecht gevonden.");
 } 
 
-$query = mysql_query("SELECT * FROM `gerecht` WHERE gerechtnaam = '" .mysql_real_escape_string($_GET['gerecht']). "'");
-$row = mysql_fetch_array($query)
+$gerecht = mysql_query("SELECT * FROM `gerecht` WHERE gerechtnaam = '" .mysql_real_escape_string($_GET['gerecht']). "'");
+$ingredienten = mysql_query("SELECT * FROM `ingredient` WHERE gerechtnaam = '" .mysql_real_escape_string($_GET['gerecht']). "'");
+$gerecht_data = mysql_fetch_array($gerecht);
+
 
 ?>
 <!DOCTYPE html>
@@ -22,9 +24,19 @@ $row = mysql_fetch_array($query)
 
 
 <div id="index_box" align="middle";>
-	<p>Gerechtnaam: <?php echo $row['gerechtnaam']; ?></p>
-	<p>EnergiePP: <?php echo $row['energiePP']; ?></p>
-	<p>bereidingstijd: <?php echo $row['bereidingstijd']; ?></p>
-	<p>bereidingswijze: <?php echo $row['bereidingswijze']; ?></p>
+	<p>Gerechtnaam: <?php echo $gerecht_data['gerechtnaam']; ?></p>
+	<p>EnergiePP: <?php echo $gerecht_data['energiePP']; ?></p>
+	<p>bereidingstijd: <?php echo $gerecht_data['bereidingstijd']; ?></p>
+	<p>bereidingswijze: <?php echo $gerecht_data['bereidingswijze']; ?></p>
+
+	<p>Ingredienten:
+	<ul>
+	<?php
+	while($ingredienten_data = mysql_fetch_array($ingredienten)) {
+		echo "<li>Product: " .$ingredienten_data['productnaam']. " HoeveelheidPP: " .$ingredienten_data['hoeveelheidPP']. "</li>";
+	}
+	?>
+	</ul>
+	</p>
 </div>
 

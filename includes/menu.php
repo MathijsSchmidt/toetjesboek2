@@ -7,5 +7,8 @@ Toetjesboek <hr>
 	<li> <a href="overzicht.php"> Alle gerechten. </a> </li>
 	<li> <a href="logout.php"> Log uit. </a> </li>
 	<br>
-	<li> <input type="text" value="zoeken" id="search" name="search"> <input type="submit" value="OK" name="submit" id="ok"></li>
+	<li>
+	<form method="get" action="overzicht.php">
+		<input type="text" value="zoeken" id="search" name="searchterm"> <input type="submit" value="OK" name="submit" id="ok"></li>
+	</form>
 </ul>
