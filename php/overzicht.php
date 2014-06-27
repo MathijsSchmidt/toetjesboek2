@@ -1,13 +1,13 @@
 <?php 
-include('../includes/connect.php');
 require_once('../config/config.php');
+$database->connect();
 
 session_start();
 
 if(!empty($_GET['searchterm'])) {
 	$query = mysql_query("SELECT * FROM gerecht WHERE gerechtnaam LIKE '%" .mysql_real_escape_string($_GET['searchterm']). "%'");
 } else {
-	$query = mysql_query("SELECT * FROM gerecht WHERE gerechtnaam");
+	$query = mysql_query("SELECT * FROM gerecht");
 }
 
 ?>
@@ -30,7 +30,7 @@ if(!empty($_GET['searchterm'])) {
 
 		while($row = mysql_fetch_array($query)) {
 
-			echo "<tr><td>" .$row['gerechtnaam']. "</td></tr>";
+			echo "<tr><td><a href='gerecht.php?gerecht=" .$row['gerechtnaam']. "'>" .$row['gerechtnaam']. "</a></td></tr>";
 
 		}
 
