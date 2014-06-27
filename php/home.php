@@ -1,9 +1,9 @@
 <?php
 include('../includes/menu.php');
 
-session_start();
+?>
 
-?><!DOCTYPE html>
+<!DOCTYPE html>
 	<html>
 		<head>
 			<title> Toetjesboek </title>

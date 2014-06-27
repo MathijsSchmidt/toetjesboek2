@@ -1,8 +1,6 @@
 <?php 
 include('../includes/connect.php');
 
-session_start();
-
 if (empty($_POST) === false) {
 			
 			$errors = array();

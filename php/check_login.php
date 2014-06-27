@@ -2,8 +2,6 @@
 include('../config/config.php');
 $database->connect();
 
-session_start();
-
 $username=$_POST['name']; 
 $password=$_POST['pass']; 
 

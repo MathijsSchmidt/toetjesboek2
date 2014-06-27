@@ -24,7 +24,7 @@
 		}
 
 		public function disconnect(){
-			msql_close($this->link);
+			mysql_close($this->link);
 		}
 
 	}
