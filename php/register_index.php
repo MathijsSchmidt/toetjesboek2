@@ -1,5 +1,37 @@
 <?php 
 include('../includes/connect.php');
+
+session_start();
+
+if (empty($_POST) === false) {
+			
+			$errors = array();
+
+
+if(isset($_POST['submit'])){
+$username=$_POST['name'];
+$password=$_POST['pass'];
+$name=$_POST['voornaam'];
+$tusvoeg=$_POST['tusvoeg'];
+$surname=$_POST['achternaam'];
+
+if  (empty($username) === true || empty($password) === true || empty($name) === true || empty($tusvoeg) === true || empty($surname) === true ){
+			$errors[] = 'Niet alle Verplichte velden zijn ingevuld!';
+		}				
+
+
+if (empty($errors) === true) {
+header("location:home.php"); 
+
+mysql_query("INSERT INTO gebruiker (gebruikersnaam, wachtwoord, voornaam, tussenvoegsel, achternaam)
+VALUES ('$username',MD5('$password') ,'$name', '$tusvoeg','$surname')");
+
+$_SESSION['name']=$name;
+echo mysql_error();
+	}
+}
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +46,7 @@ include('../includes/connect.php');
 			<h1> Toetjesboek </h1><hr>
 	Vul de onderstaande velden in: <br><br><br>
 
-	<form action="check_login.php" method="POST">
+	<form action="" method="POST">
 	<table>
 		<tr>
 			<td> Gebruikersnaam </td>
