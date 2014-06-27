@@ -1,5 +1,7 @@
 <?php
-include('../includes/connect.php');
+include('../config/config.php');
+$database->connect();
+
 session_start();
 
 $username=$_POST['name']; 
@@ -21,7 +23,7 @@ if($count==1){
 
 		
 		$_SESSION['username']=$username;
-		header("location:home.php");
+		header("location:login_succes.php");
 		} 
 
 else {
