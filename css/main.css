@@ -1,7 +1,7 @@
-body { background: url('../images/background.png') fixed no-repeat center top;
-		width: auto;
+body { width: auto;
 		height: auto;
 		margin: 0px;
+		background-color: #4791FF;
 	}
 
 #menu { background-color: #023d6a;
@@ -12,6 +12,12 @@ body { background: url('../images/background.png') fixed no-repeat center top;
 		font-family: verdana;
 		font-size: 40px;
 		color: white;}
+
+#menubalk,li, a { font-size: 25px; 
+				font-family: verdana;
+				text-decoration: none;
+				color: white;
+				margin-top: 10px;}
 
 #index_box { width: 600px;
 			height: 400px;
@@ -69,5 +75,25 @@ body { background: url('../images/background.png') fixed no-repeat center top;
 			margin-right: auto;
 			margin-left: auto;
 			margin-top: 100px;
+			font-family: verdana;
+			color: white;}
+
+#search {
+border-radius: 5px;
+background-color: #85B6FF;
+border-color: blue;
+height: 30px;
+width: 200px;
+padding-left: 5px;
+}
+
+
+#home_box {width: 600px;
+			height: 400px;
+			background-color: #a1a1a1;
+			border-radius: 10px;
+			margin-right: auto;
+			margin-left: 800px;
+			margin-top: -100px;
 			font-family: verdana;
 			color: white;}
