@@ -14,3 +14,8 @@ session_start();
 		<div id="home_box" align="center">
 			<h3> Welkom in het toetjesboek! </h3>
 		</div>
+
+<?php
+
+
+?>
