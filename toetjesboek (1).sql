@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.1.6
 -- http://www.phpmyadmin.net
 --
@@ -25,6 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Tabelstructuur voor tabel `eenheid`
 --
+
 
 CREATE TABLE IF NOT EXISTS `eenheid` (
   `eenheidsnaam` varchar(50) NOT NULL,
