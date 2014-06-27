@@ -6,6 +6,8 @@
 		private $user;
 		private $password;
 
+		public $link;
+
 		public function Database($host,$database_name,$user,$password){
 			$this->host = $host;
 			$this->database_name = $database_name;
@@ -17,8 +19,12 @@
 		}
 
 		public function connect(){
-			mysql_connect($this->host , $this->user, $this->password) or die(mysql_error("No connection"));
+			$this->link = mysql_connect($this->host , $this->user, $this->password) or die(mysql_error("No connection"));
 			mysql_select_db($this->database_name) or die(mysql_error("geen DB gevonden"));
+		}
+
+		public function disconnect(){
+			msql_close($this->link);
 		}
 
 	}
