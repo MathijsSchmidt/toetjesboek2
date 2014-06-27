@@ -1,5 +1,4 @@
 <?php 
-include('../includes/connect.php');
 require_once('../config/config.php');
 
 session_start();

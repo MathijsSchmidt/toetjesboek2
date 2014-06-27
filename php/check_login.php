@@ -1,5 +1,7 @@
 <?php
-include('../includes/connect.php');
+include('../config/config.php');
+$database->connect();
+
 session_start();
 
 $username=$_POST['name']; 

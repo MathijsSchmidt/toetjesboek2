@@ -1,11 +1,15 @@
-<?php /** database naam */
-define ('db_name', 'toetjesboek');
+<?php 
 
-/** username */
-define ('db_user', 'grecht'); //grecht
+//globals
+define ('DB_NAME', 'toetjesboek');
+define ('DB_USER', 'root'); //grecht
+define ('DB_PASS', ''); //aventus123
+define ('DB_HOST', 'localhost');
 
-/** wachtwoord */
-define ('db_pass', 'aventus123'); //aventus123
+global $database; //database object
 
-/** host */
-define ('db_host', 'localhost');
+//classes
+include('../classes/class.database.php');
+
+//database 
+$database = new Database(DB_HOST,DB_NAME,DB_USER,DB_PASS);
