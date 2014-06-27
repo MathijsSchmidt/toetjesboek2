@@ -1,7 +1,7 @@
 <?php
 include('../includes/menu.php');
 
-session_start('user');
+session_start();
 
 ?><!DOCTYPE html>
 	<html>

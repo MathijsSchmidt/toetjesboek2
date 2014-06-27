@@ -23,7 +23,7 @@ if($count==1){
 
 		
 		$_SESSION['username']=$username;
-		header("location:home.php");
+		header("location:login_succes.php");
 		} 
 
 else {
