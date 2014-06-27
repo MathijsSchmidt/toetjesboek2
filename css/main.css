@@ -1,0 +1,73 @@
+body { background: url('../images/background.png') fixed no-repeat center top;
+		width: auto;
+		height: auto;
+		margin: 0px;
+	}
+
+#menu { background-color: #023d6a;
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		width: 300px;
+		font-family: verdana;
+		font-size: 40px;
+		color: white;}
+
+#index_box { width: 600px;
+			height: 400px;
+			background-color: #a1a1a1;
+			border-radius: 10px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 100px;
+			font-family: verdana;
+			color: white;}
+
+#rbutton { font-size: 30px;
+			color: #565e65;
+			margin-left: 50px;
+		}
+
+#lbutton {font-size: 30px;
+			color: #565e65;
+			}
+
+#login {    width: 600px;
+			height: 400px;
+			background-color: #a1a1a1;
+			border-radius: 10px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 100px;
+			font-family: verdana;
+			color: white; }
+
+#l_field { margin-left: 100px;
+			margin-top: 25px;
+			width: 250px;
+			height: 25px;
+			border-radius: 10px;
+			background-color: #a1a1a2;
+			box-shadow: inset 3px 3px 3px black;
+			border-color: black;
+			font-family: verdana;
+			padding-left: 15px;}
+
+#submit { margin-left: 100px;
+			margin-top: 25px;
+			width: 100px;
+			height: 35px;
+			background-color: #a1a1a2;
+			border-radius: 10px; 
+			border-color: black; 
+			box-shadow: 3px 3px 3px black;}
+
+#register { width: 600px;
+			height: 700px;
+			background-color: #a1a1a1;
+			border-radius: 10px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 100px;
+			font-family: verdana;
+			color: white;}
