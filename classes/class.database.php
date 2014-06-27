@@ -21,5 +21,9 @@
 			mysql_select_db($this->database_name) or die(mysql_error("geen DB gevonden"));
 		}
 
+		public function disconnect(){
+			msql_close();
+		}
+
 	}
 ?>
